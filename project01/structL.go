@@ -19,7 +19,7 @@ var a string = "go语言"
 // 一般类型声明 相当于类型别名
 type aInt int
 
-var test aInt = 1
+var num aInt = 1
 
 // 结构的声明
 type Learn struct {
@@ -30,7 +30,7 @@ type Ilearn interface {
 }
 
 // 函数定义
-func learnFunc() {
+func LearnFunc() {
 
-	fmt.Println("learnStruct", test)
+	fmt.Println("learnStruct", num)
 }
