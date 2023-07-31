@@ -7,11 +7,13 @@
 package main
 
 import (
-	"fmt"
-	"project02/typeLearn"
+	"project02/constLearn"
 )
 
 func main() {
+	/*
+		变量
+	*/
 	//数据类型
 	//var i int = 1                                       //整形  1 uit8是1字节; 1 int32 是4个字节;int 会根据系统的位数动态变即win32是int32
 	//var b bool = false                                  //布尔
@@ -29,7 +31,15 @@ func main() {
 	//typeLearn.ForNChange()
 
 	// ForNSee 变量可见性规则
-	typeLearn.ForNSee()
-	fmt.Println(typeLearn.Car)
+	//typeLearn.ForNSee()
+	//fmt.Println(typeLearn.Car)
 	//fmt.Println(typeLearn.str) //私有变量不能访问
+
+	/*
+		常量
+	*/
+	//常量的声明
+	//constLearn.PrintConst()
+	//特殊变量iota的使用
+	constLearn.LearnIota()
 }
