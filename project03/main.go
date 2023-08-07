@@ -22,7 +22,10 @@ func main() {
 	LearnOperator.UseRelation()
 
 	//逻辑运算符
-	fmt.Println("关系运算符")
+	fmt.Println("逻辑运算符")
 	LearnOperator.UseLogical()
 
+	//按位运算符
+	fmt.Println("按位运算符")
+	LearnOperator.UseBitwise()
 }
