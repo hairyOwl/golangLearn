@@ -21,4 +21,8 @@ func main() {
 	fmt.Println("关系运算符")
 	LearnOperator.UseRelation()
 
+	//逻辑运算符
+	fmt.Println("关系运算符")
+	LearnOperator.UseLogical()
+
 }
