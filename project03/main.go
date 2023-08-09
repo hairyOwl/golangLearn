@@ -40,4 +40,8 @@ func main() {
 	fmt.Println("条件语句")
 	LearnControlStatement.UseIf()
 
+	//选择语句
+	fmt.Println("选择语句")
+	LearnControlStatement.UseSwitch()
+
 }

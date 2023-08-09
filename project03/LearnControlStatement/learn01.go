@@ -1,13 +1,15 @@
 /**
 *@Date: 星期二 2023/8/8 22:08
-*@File: leanrn01
+*@File: learn01
 *@Author: owl
 *@Description: 条件语句、选择语句
 **/
 
 package LearnControlStatement
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // UseIf 条件语句
 func UseIf() {
@@ -36,7 +38,29 @@ func UseIf() {
 	}
 }
 
-// UseSelect 选择语句
-func UseSelect() {
+// UseSwitch 选择语句
+func UseSwitch() {
+	switch 5 {
+	case 5:
+		fmt.Println("A")
+	case 4:
+		fmt.Println("B")
+	case 3:
+		fmt.Println("C")
+	default:
+		fmt.Println("X")
+	}
 
+	//判断类型
+	var f interface{}
+	f = "111"
+	switch f.(type) {
+	case int:
+		fmt.Println("int")
+	case float64:
+		fmt.Println("float64")
+	default:
+		fmt.Println("unknown")
+
+	}
 }
