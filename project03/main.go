@@ -9,23 +9,35 @@ package main
 
 import (
 	"fmt"
-	"project03/LearnOperator"
+	"project03/LearnControlStatement"
+	_ "project03/LearnOperator"
 )
 
 func main() {
-	//算术运算符
-	fmt.Println("算术运算符")
-	LearnOperator.UseCalc()
+	/*
+	   运算符
+	*/
+	////算术运算符
+	//fmt.Println("算术运算符")
+	//LearnOperator.UseCalc()
+	//
+	////关系运算符
+	//fmt.Println("关系运算符")
+	//LearnOperator.UseRelation()
+	//
+	////逻辑运算符
+	//fmt.Println("逻辑运算符")
+	//LearnOperator.UseLogical()
+	//
+	////按位运算符
+	//fmt.Println("按位运算符")
+	//LearnOperator.UseBitwise()
 
-	//关系运算符
-	fmt.Println("关系运算符")
-	LearnOperator.UseRelation()
+	/*
+		控制语句
+	*/
+	//条件语句
+	fmt.Println("条件语句")
+	LearnControlStatement.UseIf()
 
-	//逻辑运算符
-	fmt.Println("逻辑运算符")
-	LearnOperator.UseLogical()
-
-	//按位运算符
-	fmt.Println("按位运算符")
-	LearnOperator.UseBitwise()
 }
