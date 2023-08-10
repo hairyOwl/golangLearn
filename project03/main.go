@@ -44,4 +44,12 @@ func main() {
 	fmt.Println("选择语句")
 	LearnControlStatement.UseSwitch()
 
+	//For循环
+	fmt.Println("For循环")
+	LearnControlStatement.UseFor()
+
+	//goto break continue
+	fmt.Println("goto break continue")
+	LearnControlStatement.UseKeyWord()
+
 }
