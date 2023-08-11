@@ -49,7 +49,6 @@ func main() {
 	LearnControlStatement.UseFor()
 
 	//goto break continue
-	fmt.Println("goto break continue")
 	LearnControlStatement.UseKeyWord()
 
 }
