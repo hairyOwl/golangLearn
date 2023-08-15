@@ -5,7 +5,7 @@
 *@Description: 函数与操作符
 **/
 
-package LearnOperator
+package LearnFuncAndP
 
 import (
 	"fmt"

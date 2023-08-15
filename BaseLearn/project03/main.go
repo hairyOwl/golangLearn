@@ -10,7 +10,7 @@ package main
 import (
 	"fmt"
 	"math"
-	"project03/LearnOperator"
+	"project03/LearnFuncAndP"
 	_ "project03/LearnOperator"
 )
 
@@ -52,21 +52,34 @@ func main() {
 	//goto break continue
 	LearnControlStatement.UseKeyWord()*/
 
+	/*
+		函数
+	*/
 	//func operator
 	//fmt.Println(LearnOperator.Eval(1, 2, "a"))
-	if result, err := LearnOperator.Eval(3, 4, "*"); err != nil {
+	if result, err := LearnFuncAndP.Eval(3, 4, "*"); err != nil {
 		//出错
 		fmt.Println(err)
 	} else {
 		//正确
 		fmt.Println(result)
 	}
-	fmt.Println(LearnOperator.Div(12, 5))
+	fmt.Println(LearnFuncAndP.Div(12, 5))
 	//函数式编程
-	fmt.Println(LearnOperator.Apply(LearnOperator.Pow, 3, 2))
-	fmt.Println(LearnOperator.Apply(
+	fmt.Println(LearnFuncAndP.Apply(LearnFuncAndP.Pow, 3, 2))
+	fmt.Println(LearnFuncAndP.Apply(
 		func(i int, i2 int) int { //函数参数直接写匿名函数
 			return int(math.Pow(float64(i), float64(i2)))
 		}, 3, 3))
-	fmt.Println(LearnOperator.Sum(1, 3, 5))
+	fmt.Println(LearnFuncAndP.Sum(1, 3, 5))
+
+	/*
+		指针
+	*/
+	a, b := 3, 4
+	LearnFuncAndP.Swap(&a, &b)
+	fmt.Println("a=", a, "b=", b)
+	a, b = LearnFuncAndP.Swap2(a, b)
+	fmt.Println("a=", a, "b=", b)
+
 }
