@@ -44,18 +44,18 @@ func main() {
 	*/
 	fmt.Println("切片中的元素删除")
 	s2 = append(s2[:3], s2[4:]...) //删除s2[3]
-	printSlice(s2)
+	printSlice(s2)                 //[2 4 6 0 0 0 0 0 0 0 0 0 0 0 0]
 
 	fmt.Println("获取切片的头")
 	front := s2[0]
 	s2 = s2[1:]
-	fmt.Println(front)
-	printSlice(s2)
+	fmt.Println(front) //2
+	printSlice(s2)     //[4 6 0 0 0 0 0 0 0 0 0 0 0 0]  len= 14  cap= 15
 
 	fmt.Println("获取切片的尾")
 	tail := s2[len(s2)-1]
 	s2 = s2[:len(s2)-1]
-	fmt.Println(tail)
-	printSlice(s2)
+	fmt.Println(tail) //0
+	printSlice(s2)    //[4 6 0 0 0 0 0 0 0 0 0 0 0]  len= 13  cap= 15
 
 }
