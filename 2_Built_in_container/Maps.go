@@ -11,6 +11,29 @@ import (
 	"fmt"
 )
 
+// 寻找最长不含有重复字符串的子串,并返回子串长度
+func longStr(str string) int {
+	start := 0                         //子串的开始下标
+	maxLen := 0                        //子串长度
+	lastOccurred := make(map[byte]int) //字符最近重复的下标
+
+	for i, char := range []byte(str) { //[]byte(str) 字符串转为字符数组
+		fmt.Println("i=", i, str[:i])
+		fmt.Println("start=", start, " maxLen=", maxLen)
+		fmt.Println("lastOccurred=", lastOccurred)
+		lastI, ok := lastOccurred[char]
+		if ok && lastOccurred[char] >= start { //遍历的子串出现重复时
+			start = lastI + 1 //开始指标后移到重复后
+		}
+		if maxLen < (i + 1 - start) { //如果当前不重复子串大于maxlen
+			maxLen = i + 1 - start
+		}
+		lastOccurred[char] = i //遍历字符最近一次出现的下标更新
+	}
+
+	return maxLen
+}
+
 func main() {
 	/*
 		map的声明
@@ -59,4 +82,9 @@ func main() {
 	delete(m, "name")
 	name, ok = m["name"]
 	fmt.Println("after delete", name, ok)
+
+	/*
+		寻找最长不含有重复字符串的子串,并返回子串长度
+	*/
+	fmt.Println(longStr("aaabcbbbb"))
 }
