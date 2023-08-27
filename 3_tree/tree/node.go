@@ -15,8 +15,8 @@ type Node struct {
 	Left, Right *Node
 }
 
-// Print 结构体方法，方法名前是接收者(node TreeNode)相当于this
-func (node *Node) Print() { //(node TreeNode)值传递
+// Print 结构体方法，方法名前是接收者(node Node)相当于this
+func (node *Node) Print() { //(node Node)值传递
 	fmt.Print(node.Value, " ")
 }
 func (node *Node) SetValue(v int) { //值传递不能修改值 所以为了修改value,接收者用地址
