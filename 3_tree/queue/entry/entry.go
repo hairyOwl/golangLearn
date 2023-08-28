@@ -2,7 +2,7 @@
 *@Date: 星期日 2023/8/27 23:13
 *@File: entry
 *@Author: owl
-*@Description: 通过定义别名 扩展已有类型
+*@Description: 通过定义组合 扩展已有类型
 **/
 
 package main
