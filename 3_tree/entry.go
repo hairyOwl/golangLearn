@@ -16,7 +16,7 @@ import (
 	扩展已有类型
 */
 // myTreeNode 扩展树遍历
-type myTreeNode struct { //定义别名
+type myTreeNode struct { //使用组合
 	node *tree.Node
 }
 
