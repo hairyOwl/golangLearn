@@ -11,7 +11,12 @@ type Retriever struct {
 	Contents string
 }
 
+func (r *Retriever) Post(url string, form map[string]string) string {
+	r.Contents = form["contents"]
+	return "ok"
+}
+
 // Get 实现了使用者定义的方法就是实现了接口
-func (r Retriever) Get(s string) string {
+func (r *Retriever) Get(s string) string {
 	return r.Contents
 }
