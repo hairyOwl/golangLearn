@@ -10,7 +10,10 @@ package main
 import (
 	"5_leanInterface/retriever/real"
 	"5_leanInterface/retriever/urlGet"
+	"bufio"
 	"fmt"
+	"io"
+	"strings"
 	"time"
 )
 
@@ -58,6 +61,7 @@ func inspect(r Retriever) {
 		fmt.Println("UserAgent", v.UserAgent)
 
 	}
+	fmt.Println("")
 }
 
 func main() {
@@ -86,4 +90,20 @@ func main() {
 	//fmt.Println(download(r))
 	s := &urlGet.Retriever{Contents: "接口的组合 "}
 	fmt.Println(session(s))
+
+	fmt.Println("")
+
+	str := `adc
+	some Reader
+		
+	use`
+	PrintfContents(strings.NewReader(str))
+}
+
+func PrintfContents(reader io.Reader) {
+	scanner := bufio.NewScanner(reader)
+
+	for scanner.Scan() {
+		fmt.Println(scanner.Text())
+	}
 }

@@ -7,10 +7,28 @@
 
 package urlGet
 
+import (
+	"fmt"
+)
+
 type Retriever struct {
 	Contents string
 }
 
+// 系统常用接口 stringer
+func (r *Retriever) String() string {
+	return fmt.Sprintf("Retriever: {Contents=%s}", r.Contents)
+}
+
+func (r *Retriever) Read(p []byte) (n int, err error) {
+	//TODO implement me
+	panic("implement me")
+}
+
+func (r *Retriever) Write(p []byte) (n int, err error) {
+	//TODO implement me
+	panic("implement me")
+}
 func (r *Retriever) Post(url string, form map[string]string) string {
 	r.Contents = form["contents"]
 	return "ok"
